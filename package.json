@@ -1,0 +1,20 @@
+{
+  "name": "mockrequest",
+  "version": "1.0.0",
+  "description": "Fake API",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "init:db": "node generateData.js > db.json"
+  },
+  "author": "kocetora",
+  "license": "ISC",
+  "dependencies": {
+    "faker": "^5.5.3"
+  },
+  "devDependencies": {
+    "json-server": "^0.16.3",
+    "json-server-auth": "^2.0.2",
+    "nodemon": "^2.0.12"
+  }
+}
