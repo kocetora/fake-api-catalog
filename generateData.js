@@ -14,21 +14,19 @@ for (let i=1; i<=n; i++) {
     title: faker.commerce.productName(),
     image: faker.image.food(),
     description: faker.commerce.productDescription(),
-    price: faker.commerce.price()
   });
   for (let j=1; j<=3; j++) {
     database.comments.push({
+      id: i,
       userId: Math.ceil(Math.random()*n),
       productId: Math.ceil(Math.random()*n),
       text: faker.random.words(),
       rate: Math.ceil(Math.random()*10)/2,
-      createdAt: faker.time.recent()
     });
   }
   database.users.push({
     id: i,
-    name: faker.name.findName(),
-    email: faker.internet.email(),
+    username: faker.name.findName(),
     password: faker.internet.password()
   });
 }
